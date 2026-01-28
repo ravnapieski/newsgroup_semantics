@@ -1,0 +1,7 @@
+__pycache__/
+.env
+
+data/
+
+# Work in progress
+02_doc2vec.ipynb
