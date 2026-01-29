@@ -1,18 +1,14 @@
-# 🗿 newsgroup_semantics
+# 📰 newsgroup_semantics
 
 ## Manifold Learning & Semantic Discovery Pipeline
 
 Resolving high-dimensional sparsity through optimized latent semantic analysis.
-
----
 
 ## 🏛️ Architecture
 
 This repository benchmarks **Classical (TF-IDF)** vs. **Embedding-based (Doc2Vec)** architectures for **unsupervised topic discovery**.
 
 It explicitly rejects the _“blob” artifacts_ common in naïve dimensionality-reduction pipelines by enforcing **dense feature initialization before manifold projection**.
-
-### ⚡ Optimized Pipeline
 
 ### 🧠 Latent Discovery
 
@@ -28,23 +24,27 @@ It explicitly rejects the _“blob” artifacts_ common in naïve dimensionality
   - **Visualization**
 - Production-grade utilities isolated from exploratory notebooks
 
----
+<h2>🗿 Visual Dominance</h2>
 
-## 📉 Visual Dominance
+<p><em>Baseline vs. Optimization</em></p>
 
-### Baseline vs. Optimization
+<table>
+  <tr>
+    <td align="center">
+      <strong>Naïve t-SNE (Raw Sparse)</strong><br>
+      <img src="results/figures/tsne_naive_raw_sparse.png" width="420">
+      <br><em>Messy starburst artifact</em>
+    </td>
+    <td align="center">
+      <strong>SVD-Initialized t-SNE</strong><br>
+      <img src="results/figures/tsne_svd_reduced.png" width="420">
+      <br><em>Clear semantic islands</em>
+    </td>
+  </tr>
+</table>
 
-> We don’t accept noise.  
-> We force separation.
-
-| Baseline (Naïve t-SNE)   | Optimized (SVD-Initialized) |
-| ------------------------ | --------------------------- |
-| Messy starburst artifact | Clear semantic islands      |
-
-**Observation:**  
-SVD initialization successfully _unfolds the manifold_, separating **Hockey (Cyan)** from **Baseball (Pink)** where raw Euclidean distance failed. Check notebook for more information.
-
----
+<p><strong>Observation:</strong><br>
+SVD initialization completely mogs the raw sparse t-SNE. By collapsing the TF-IDF space into a dense, low-rank semantic subspace before non-linear projection, it successfully unfolds the manifold, separating Hockey (Cyan) from Baseball (Pink) where raw Euclidean distance failed. Check notebook for more information. </p>
 
 ## 📂 Repository Structure
 
